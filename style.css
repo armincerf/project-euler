@@ -1,0 +1,65 @@
+* {
+  font-family: 'Helvetica', sans-serif;
+  margin: 0;
+  padding: 0;
+  max-width: 800px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.euler {
+  font-size: xx-large;
+  margin: 25px 50px 0;
+  width: 200px;
+}
+
+.introduction {
+  font-size: medium;
+  margin: 0 50px;
+}
+
+.problem {
+  margin: 50px;
+  padding: 10px;
+  background-color:rgba(30, 92, 111, 0.18);
+}
+
+.title {
+ font-size: large;
+}
+
+.problemNumber {
+  font-size: small;
+  margin-bottom: 10px;
+}
+
+.question {
+  font-size: medium;
+  margin: 10px;
+}
+
+.button {
+  display: inline;
+  margin: 15px 3px;
+  color: #757575;
+  background-color: hsla(0, 0%, 90%, 1);
+    box-shadow: 0px 0px 0px 1px hsla(0, 0%, 75%, 1);
+
+  padding: 7px 10px;
+  font-weight: bold;
+  font-size: small;
+}
+
+.button:hover {
+  box-shadow: 0px 0px 3px 3px hsla(0, 0%, 75%, 1);
+  border-radius: 2px;
+  color: black;
+}
+
+.button:active {
+  box-shadow: 0px 0px 0px 1px #4684ee;
+}
+
+.answer {
+  padding: 15px;
+}

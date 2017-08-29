@@ -13,7 +13,7 @@ function problem1() {
   for (var i = 0; i < naturalNumbers.length; i++) {
     result += naturalNumbers[i];
   }
-  document.getElementById("output1").innerHTML = result;
+  document.getElementById("output1").innerHTML = "The the sum of all the multiples of 3 or 5 below " + upperLimit + " is: " + result;
 }
 
 // https://projecteuler.net/problem=2
@@ -35,5 +35,5 @@ function problem2() {
       result += fibonacciSequence[i];
   }
 
-  document.getElementById("output2").innerHTML = "Sum of even numbers is: " + result;
+  document.getElementById("output2").innerHTML = "The sum of the even numbers in the sequence that does not exceed " + upperLimit + " is: " + result;
 }
