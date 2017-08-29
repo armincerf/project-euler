@@ -40,18 +40,19 @@ function problem3() {
   var input = document.getElementById("input3").value;
   var divisor = 2;
   var workingValue = input;
-  var currentLargestValue = 0;
+  var currentLargestPrimeFactor = 1;
 
-  while (Math.pow(divisor,2) <= workingValue) {
+  while (workingValue/divisor !== 1) {
     if (workingValue % divisor === 0) {
-      workingValue /= divisor;
-      currentLargestValue = divisor;
+      currentLargestPrimeFactor = divisor;
+      workingValue /= currentLargestPrimeFactor;
     }
-    else
+    else {
       divisor++;
+    }
   }
-  if (workingValue > currentLargestValue)
-    currentLargestValue = workingValue;
+  if (workingValue > currentLargestPrimeFactor)
+    currentLargestPrimeFactor = workingValue;
 
-  document.getElementById("output3").innerHTML = "The largest prime factor of the number " + input + " is " + currentLargestValue;
+  document.getElementById("output3").innerHTML ="Largest prime factor is: " + currentLargestPrimeFactor;
 }
