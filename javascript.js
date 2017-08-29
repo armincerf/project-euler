@@ -1,4 +1,3 @@
-// https://projecteuler.net/problem=1
 function problem1() {
   var upperLimit = document.getElementById("input1").value;
 
@@ -16,7 +15,6 @@ function problem1() {
   document.getElementById("output1").innerHTML = "The the sum of all the multiples of 3 or 5 below " + upperLimit + " is: " + result;
 }
 
-// https://projecteuler.net/problem=2
 function problem2() {
   var upperLimit = document.getElementById("input2").value;
 
@@ -36,4 +34,24 @@ function problem2() {
   }
 
   document.getElementById("output2").innerHTML = "The sum of the even numbers in the sequence that does not exceed " + upperLimit + " is: " + result;
+}
+
+function problem3() {
+  var input = document.getElementById("input3").value;
+  var divisor = 2;
+  var workingValue = input;
+  var currentLargestValue = 0;
+
+  while (Math.pow(divisor,2) <= workingValue) {
+    if (workingValue % divisor === 0) {
+      workingValue /= divisor;
+      currentLargestValue = divisor;
+    }
+    else
+      divisor++;
+  }
+  if (workingValue > currentLargestValue)
+    currentLargestValue = workingValue;
+
+  document.getElementById("output3").innerHTML = "The largest prime factor of the number " + input + " is " + currentLargestValue;
 }
