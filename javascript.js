@@ -56,3 +56,48 @@ function problem3() {
 
   document.getElementById("output3").innerHTML ="Largest prime factor is: " + currentLargestPrimeFactor;
 }
+function check_Palindrome(str_entry){
+// Change the string into lower case and remove  all non-alphanumeric characters
+   var cstr = str_entry.toLowerCase().replace(/[^a-zA-Z0-9]+/g,'');
+  var ccount = 0;
+// Check whether the string is empty or not
+  if(cstr==="") {
+    console.log("Nothing found!");
+    return false;
+  }
+// Check if the length of the string is even or odd 
+  if ((cstr.length) % 2 === 0) {
+    ccount = (cstr.length) / 2;
+  } else {
+// If the length of the string is 1 then it becomes a palindrome
+    if (cstr.length === 1) {
+      return true;
+    } else {
+// If the length of the string is odd ignore middle character
+      ccount = (cstr.length - 1) / 2;
+    }
+  }
+// Loop through to check the first character to the last character and then move next
+  for (var x = 0; x < ccount; x++) {
+// Compare characters and drop them if they do not match 
+    if (cstr[x] != cstr.slice(-1-x)[0]) {
+      return false;
+    }
+  }
+  return true;
+}
+function problem4(){
+  final=0;
+  var input = document.getElementById("input4").value;
+  for(i = 0 ; i<input ; i++){
+    for(j = 0; j<input; j++){
+      if(check_Palindrome((i*j).toString())){
+        if((i*j)>final){
+        final = i*j;
+        }
+      }
+    }
+  }
+  document.getElementById("output4").innerHTML ="Largest palindrome that can be made is " + final;
+}
+
