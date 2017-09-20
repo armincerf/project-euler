@@ -100,4 +100,32 @@ function problem4(){
   }
   document.getElementById("output4").innerHTML ="Largest palindrome that can be made is " + final;
 }
+function problem5(){
+  test = false;
+  d = parseInt(document.getElementById("input5").value);
+  if(d<2){
+    document.getElementById("output5").innerHTML ="Please enter a number bigger than 2!";
+
+  }
+  else{
+  number = d;
+  while(!test){
+    j = 0;
+    for (var i = 1; i<d+1; i++) {
+      if(number%i!==0){
+        number++;
+        break;
+      }
+      else{
+        console.log(number);
+        j++;
+      }
+    }
+    if(j===d){
+      test = true;
+      document.getElementById("output5").innerHTML ="Smallest factor found is " + number;
+    }
+  }
+}
+}
 
